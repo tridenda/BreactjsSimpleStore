@@ -9,15 +9,24 @@ import {
   signOut,
   onAuthStateChanged,
 } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+  query,
+  getDocs,
+} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHSyOmWMxWD9clpcKYYCGnNxWSkqxSwd8",
-  authDomain: "breactjs-ecommerce-db.firebaseapp.com",
-  projectId: "breactjs-ecommerce-db",
-  storageBucket: "breactjs-ecommerce-db.appspot.com",
-  messagingSenderId: "569334952128",
-  appId: "1:569334952128:web:c97228b23a54c8d9e4fd25",
+  apiKey: "AIzaSyDnQMOGvJF84KpifAYLCNfelVSxCgVd23A",
+  authDomain: "breactjs-simple-store-db.firebaseapp.com",
+  projectId: "breactjs-simple-store-db",
+  storageBucket: "breactjs-simple-store-db.appspot.com",
+  messagingSenderId: "874374467473",
+  appId: "1:874374467473:web:d6a356ea95c521fcf31430",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -35,6 +44,36 @@ export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
+
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = collection(db, collectionKey);
+  const batch = writeBatch(db);
+
+  objectsToAdd.forEach((object) => {
+    const docRef = doc(collectionRef, object.title.toLowerCase());
+    batch.set(docRef, object);
+  });
+
+  await batch.commit();
+  console.log("done");
+};
+
+export const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, "categories");
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
+};
 
 export const createUserDocumentFromAuth = async (
   userAuth,

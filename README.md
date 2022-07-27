@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Breactjs SimpleStore
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started 🚀
 
-## Available Scripts
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-In the project directory, you can run:
+### Prerequisites 📋
 
-### `npm start`
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [NPM](http://npmjs.com)) installed on your computer.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+node@v16.4.2 or higher
+npm@7.18.1 or higher
+git@2.30.1 or higher
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Also, you can use [Yarn](https://yarnpkg.com/) instead of NPM ☝️
 
-### `npm test`
+```
+yarn@v1.22.10 or higher
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## How To Use 🔧
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From your command line, first clone Simplefolio:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+$ git clone https://github.com/tridenda/BreactjsSimpleStore/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Move into the repository
+$ cdBreactjsSimpleStore
 
-### `npm run eject`
+# Remove the current origin repository
+$ git remote remove origin
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After that, you can install the dependencies either using NPM or Yarn.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Using NPM: Simply run the below commands.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# Install dependencies
+$ npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start the development server
+$ npm start
+```
 
-## Learn More
+Using Yarn: Be aware of that you'll need to delete the `package-lock.json` file before executing the below commands.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Install dependencies
+$ yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start the development server
+$ yarn start
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+- **Tri Denda** - [https://github.com/tridenda](https://github.com/tridenda)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Status
 
-### Making a Progressive Web App
+[![Netlify Status](https://api.netlify.com/api/v1/badges/476e69c2-d8f7-4dc3-8fe0-90cde4df6b09/deploy-status)](https://app.netlify.com/sites/breactjs-simplestore/deploys)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License 📄
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

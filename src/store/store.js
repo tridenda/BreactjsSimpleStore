@@ -17,7 +17,7 @@ import { rootReducer } from "./root-reducer";
 //   console.log("next state: ", store.getState());
 // };
 
-const middleWares = [process.env.NODE_ENV === "development" && logger];
+const middleWares = [logger];
 // const middleWares = [loggerMiddleware];
 
 const composedEnhancers = compose(applyMiddleware(...middleWares));

@@ -65,7 +65,9 @@ $ yarn start
 
 - **Tri Denda** - [https://github.com/tridenda](https://github.com/tridenda)
 
-## Status[![Netlify Status](https://api.netlify.com/api/v1/badges/3ca97466-ae6a-443b-852a-3aba4319b1ff/deploy-status)](https://app.netlify.com/sites/breactjs-simplestore/deploys)
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3ca97466-ae6a-443b-852a-3aba4319b1ff/deploy-status)](https://app.netlify.com/sites/breactjs-simplestore/deploys)
 
 ## License 📄
 

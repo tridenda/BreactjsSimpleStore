@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+import logoUrl from "../../assets/logo192.png";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { signOutStart } from "../../store/user/user.action";
@@ -28,7 +28,8 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <CrwnLogo className="logo" />
+          <img src={logoUrl} alt="Breactjs SimpleStore Logo" />
+          <h1>Breactjs SimpleStore</h1>
         </LogoContainer>
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
@@ -38,7 +39,7 @@ const Navigation = () => {
               SIGN OUT
             </span>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <NavLink to="/auth">SIGN IN/SIGN UP</NavLink>
           )}
           <CartIcon />
         </NavLinks>

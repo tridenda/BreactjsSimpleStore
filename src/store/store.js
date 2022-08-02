@@ -20,7 +20,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // Set nodeEnv to "development" during develop the app
 // or set to "production" when you want to deploy the app
-const nodeEnv = "development";
+const nodeEnv = "production";
 const middleWares = [
   process.env.NODE_ENV === nodeEnv && logger,
   sagaMiddleware,

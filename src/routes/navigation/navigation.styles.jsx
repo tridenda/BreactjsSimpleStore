@@ -7,3 +7,8 @@ export const NavigationContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 25px;
 `;
+
+export const MainContainer = styled.div`
+  width: 1100px;
+  margin: 0 auto;
+`;

@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import Header from "../../components/header/header.component";
 
-import { NavigationContainer } from "./navigation.styles";
+import { MainContainer, NavigationContainer } from "./navigation.styles";
 
 const Navigation = () => {
   return (
@@ -11,7 +11,9 @@ const Navigation = () => {
       <NavigationContainer>
         <Header />
       </NavigationContainer>
-      <Outlet />
+      <MainContainer>
+        <Outlet />
+      </MainContainer>
     </Fragment>
   );
 };

@@ -1,49 +1,15 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
 
-import CartIcon from "../../components/cart-icon/cart-icon.component";
-import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import Header from "../../components/header/header.component";
 
-import logoUrl from "../../assets/logo192.png";
-import { selectCurrentUser } from "../../store/user/user.selector";
-import { selectIsCartOpen } from "../../store/cart/cart.selector";
-import { signOutStart } from "../../store/user/user.action";
-
-import {
-  NavigationContainer,
-  NavLinks,
-  NavLink,
-  LogoContainer,
-} from "./navigation.styles";
+import { NavigationContainer } from "./navigation.styles";
 
 const Navigation = () => {
-  const dispatch = useDispatch();
-  const currentUser = useSelector(selectCurrentUser);
-  const isCartOpen = useSelector(selectIsCartOpen);
-
-  const signOutUser = () => dispatch(signOutStart());
-
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer to="/">
-          <img src={logoUrl} alt="Breactjs SimpleStore Logo" />
-          <h1>Breactjs SimpleStore</h1>
-        </LogoContainer>
-        <NavLinks>
-          <NavLink to="/shop">SHOP</NavLink>
-
-          {currentUser ? (
-            <span className="nav-link" onClick={signOutUser}>
-              SIGN OUT
-            </span>
-          ) : (
-            <NavLink to="/auth">SIGN IN/SIGN UP</NavLink>
-          )}
-          <CartIcon />
-        </NavLinks>
-        {isCartOpen && <CartDropdown />}
+        <Header />
       </NavigationContainer>
       <Outlet />
     </Fragment>

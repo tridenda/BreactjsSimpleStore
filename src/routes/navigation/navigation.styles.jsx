@@ -5,7 +5,6 @@ export const NavigationContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
 `;
 
 export const MainContainer = styled.div`

@@ -1,19 +1,30 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
+import Footer from "../../components/footer/footer.component";
 
 import Header from "../../components/header/header.component";
 
-import { MainContainer, NavigationContainer } from "./navigation.styles";
+import {
+  MainWrapper,
+  Main,
+  HeaderWrapper,
+  FooterWrapper,
+} from "./navigation.styles";
 
 const Navigation = () => {
   return (
     <Fragment>
-      <NavigationContainer>
+      <HeaderWrapper>
         <Header />
-      </NavigationContainer>
-      <MainContainer>
-        <Outlet />
-      </MainContainer>
+      </HeaderWrapper>
+      <MainWrapper>
+        <Main>
+          <Outlet />
+        </Main>
+      </MainWrapper>
+      <FooterWrapper>
+        <Footer />
+      </FooterWrapper>
     </Fragment>
   );
 };

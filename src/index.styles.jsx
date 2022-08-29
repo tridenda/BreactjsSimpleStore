@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  html, body, #root, .App {
+    height: 100%;
     margin: 0;
     font-family: "Open Sans", "Halvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -20,6 +21,10 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  h1 {
+    margin: 0;
   }
 `;
 

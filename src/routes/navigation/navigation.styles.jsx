@@ -15,7 +15,7 @@ export const Main = styled.div`
   width: 1100px;
   margin: 0 auto;
   overflow: auto;
-  padding-bottom: 200px;
+  padding-bottom: 360px;
 `;
 
 export const FooterWrapper = styled.div`

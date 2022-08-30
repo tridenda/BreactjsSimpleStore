@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../button/button.component";
 
 import {
@@ -11,7 +12,9 @@ const Cover = () => {
     <CoverContainer>
       <DescriptionContainer>
         <TitleText>Spring Colletion 2022</TitleText>
-        <Button buttonType="google-sign-in">Shop now</Button>
+        <Link to="/shop">
+          <Button buttonType="google-sign-in">Shop now</Button>
+        </Link>
       </DescriptionContainer>
     </CoverContainer>
   );

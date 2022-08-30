@@ -30,9 +30,9 @@ const Header = () => {
       </TitleContainer>
       <LinksContainer>
         <NavLink to="/shop">Shop</NavLink>
-        <NavLink to="/">About</NavLink>
-        <NavLink to="/">Blog</NavLink>
-        <NavLink to="/">Pages</NavLink>
+        <NavLink to="#">About</NavLink>
+        <NavLink to="#">Blog</NavLink>
+        <NavLink to="#">Pages</NavLink>
       </LinksContainer>
       <AccountContainer>
         <CartIcon />

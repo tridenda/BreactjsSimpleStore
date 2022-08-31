@@ -8,9 +8,9 @@ const Home = () => {
     <Fragment>
       <Cover />
       {/*
+       */}
       <HotProduct />
       <Directory />
-      */}
     </Fragment>
   );
 };

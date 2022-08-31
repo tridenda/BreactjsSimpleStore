@@ -88,8 +88,8 @@ export const AccountButtom = styled(Link)`
 `;
 
 export const HamburgerButton = styled(BarsSvg)`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 
   @media screen and (min-width: 801px) {
     display: none;
@@ -97,11 +97,10 @@ export const HamburgerButton = styled(BarsSvg)`
 `;
 
 export const CloseButton = styled(XmarkSvg)`
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 
   @media screen and (min-width: 801px) {
     display: none;
   }
 `;
-

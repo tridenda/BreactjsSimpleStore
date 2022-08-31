@@ -56,12 +56,12 @@ const Header = () => {
 
         {isCartOpen && <CartDropdown />}
         {isMenuOpen ? (
-          <HamburgerButton onClick={menuOpenHandler} />
-        ) : (
           <CloseButton onClick={menuOpenHandler} />
+        ) : (
+          <HamburgerButton onClick={menuOpenHandler} />
         )}
 
-        {!isMenuOpen && <MenuDropdown menuOpenHandler={menuOpenHandler} />}
+        {isMenuOpen && <MenuDropdown menuOpenHandler={menuOpenHandler} />}
       </RightNavContainer>
     </HeaderContainer>
   );

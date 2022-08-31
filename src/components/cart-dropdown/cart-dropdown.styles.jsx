@@ -17,12 +17,16 @@ export const CartDropdownContainer = styled.div`
   background-color: white;
   top: 50px;
   margin-right: 150px;
-  z-index: 5;
+  z-index: 8;
 
   ${BaseButton},
   ${GoogleSignInButton},
   ${InvertedButton} {
     margin-top: auto;
+  }
+
+  @media screen and (max-width: 800px) {
+    margin: unset;
   }
 `;
 

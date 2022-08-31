@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { selectCurrentUser } from "../../store/user/user.selector";
@@ -7,14 +8,17 @@ import { signOutStart } from "../../store/user/user.action";
 import CartIcon from "../cart-icon/cart-icon.component";
 import {
   AccountButtom,
-  AccountContainer,
   HeaderContainer,
-  LinksContainer,
+  LeftNavContainer,
+  MiddleNavContainer,
+  RightNavContainer,
   NavLink,
-  TitleContainer,
   TitleLink,
+  HamburgerButton,
+  CloseButton,
 } from "./header.styles";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import MenuDropdown from "../menu-dropdown/menu-dropdown.component";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -23,18 +27,24 @@ const Header = () => {
 
   const signOutUser = () => dispatch(signOutStart());
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuOpenHandler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <HeaderContainer>
-      <TitleContainer>
-        <TitleLink to="/">Breactjs SimpleStore</TitleLink>
-      </TitleContainer>
-      <LinksContainer>
+      <LeftNavContainer>
+        <TitleLink to="/">Breactjs Store</TitleLink>
+      </LeftNavContainer>
+      <MiddleNavContainer>
         <NavLink to="/shop">Shop</NavLink>
         <NavLink to="#">About</NavLink>
         <NavLink to="#">Blog</NavLink>
         <NavLink to="#">Pages</NavLink>
-      </LinksContainer>
-      <AccountContainer>
+      </MiddleNavContainer>
+      <RightNavContainer>
         <CartIcon />
         {currentUser ? (
           <AccountButtom to="#" onClick={signOutUser}>
@@ -45,7 +55,14 @@ const Header = () => {
         )}
 
         {isCartOpen && <CartDropdown />}
-      </AccountContainer>
+        {isMenuOpen ? (
+          <HamburgerButton onClick={menuOpenHandler} />
+        ) : (
+          <CloseButton onClick={menuOpenHandler} />
+        )}
+
+        {!isMenuOpen && <MenuDropdown menuOpenHandler={menuOpenHandler} />}
+      </RightNavContainer>
     </HeaderContainer>
   );
 };

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ReactComponent as BarsSvg } from "../../assets/bars.svg";
+import { ReactComponent as XmarkSvg } from "../../assets/xmark.svg";
 
 export const HeaderContainer = styled.div`
   width: 100%;
@@ -9,8 +11,36 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const TitleContainer = styled.div`
+export const LeftNavContainer = styled.div`
   width: 33%;
+
+  @media screen and (max-width: 800px) {
+    width: auto;
+  }
+`;
+
+export const MiddleNavContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 33%;
+  display: flex;
+  gap: 15px;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
+export const RightNavContainer = styled.div`
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+
+  @media screen and (max-width: 800px) {
+    width: auto;
+  }
 `;
 
 export const TitleLink = styled(Link)`
@@ -20,25 +50,9 @@ export const TitleLink = styled(Link)`
   margin: unset;
 `;
 
-export const LinksContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 33%;
-  display: flex;
-  gap: 15px;
-`;
-
 export const NavLink = styled(Link)`
   font-size: 20px;
   font-family: Monserrat;
-`;
-
-export const AccountContainer = styled.div`
-  width: 33%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 5px;
 `;
 
 export const AccountButtom = styled(Link)`
@@ -67,4 +81,27 @@ export const AccountButtom = styled(Link)`
     color: black;
     border: 1px solid black;
   }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
+
+export const HamburgerButton = styled(BarsSvg)`
+  width: 35px;
+  height: 35px;
+
+  @media screen and (min-width: 801px) {
+    display: none;
+  }
+`;
+
+export const CloseButton = styled(XmarkSvg)`
+  width: 35px;
+  height: 35px;
+
+  @media screen and (min-width: 801px) {
+    display: none;
+  }
+`;
+

@@ -5,6 +5,11 @@ export const HeaderWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1130px) {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+  }
 `;
 
 export const MainWrapper = styled.div`

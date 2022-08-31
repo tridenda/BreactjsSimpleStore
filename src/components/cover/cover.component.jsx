@@ -1,20 +1,22 @@
-import { Link } from "react-router-dom";
 import Button from "../button/button.component";
 
 import {
   CoverContainer,
   DescriptionContainer,
   TitleText,
+  CoverLink,
+  TransparentBg,
 } from "./cover.styles";
 
 const Cover = () => {
   return (
     <CoverContainer>
       <DescriptionContainer>
+        <TransparentBg />
         <TitleText>Spring Colletion 2022</TitleText>
-        <Link to="/shop">
+        <CoverLink to="/shop">
           <Button buttonType="google-sign-in">Shop now</Button>
-        </Link>
+        </CoverLink>
       </DescriptionContainer>
     </CoverContainer>
   );

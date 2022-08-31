@@ -17,16 +17,16 @@ const Navigation = () => {
       <HeaderWrapper>
         <Header />
       </HeaderWrapper>
-      {/*
-       */}
       <MainWrapper>
         <Main>
           <Outlet />
         </Main>
       </MainWrapper>
+      {/*
       <FooterWrapper>
-        <Footer />
+      <Footer />
       </FooterWrapper>
+    */}
     </Fragment>
   );
 };

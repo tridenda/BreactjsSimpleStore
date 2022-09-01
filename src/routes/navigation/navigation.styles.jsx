@@ -21,6 +21,11 @@ export const Main = styled.div`
   margin: 0 auto;
   overflow: auto;
   padding-bottom: 360px;
+
+  @media screen and (max-width: 1130px) {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+  }
 `;
 
 export const FooterWrapper = styled.div`

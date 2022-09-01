@@ -23,10 +23,10 @@ const Navigation = () => {
         </Main>
       </MainWrapper>
       {/*
+       */}
       <FooterWrapper>
-      <Footer />
+        <Footer />
       </FooterWrapper>
-    */}
     </Fragment>
   );
 };

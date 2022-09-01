@@ -33,6 +33,8 @@ export const ProductCardContainer = styled.div`
       display: flex;
     }
   }
+
+  margin-bottom: 20px;
 `;
 
 export const Footer = styled.div`

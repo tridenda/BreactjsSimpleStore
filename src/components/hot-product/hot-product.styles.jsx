@@ -101,8 +101,12 @@ export const TopTextContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    width: 90vw;
+    width: 80vw;
     height: auto;
+  }
+
+  @media screen and (max-width: 350px) {
+    width: 90vw;
   }
 `;
 
@@ -130,6 +134,10 @@ export const BottomTextContainer = styled.div`
     width: 80vw;
     height: auto;
     margin-top: 220px;
+  }
+
+  @media screen and (max-width: 350px) {
+    width: 90vw;
   }
 `;
 

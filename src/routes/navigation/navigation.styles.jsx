@@ -31,4 +31,9 @@ export const Main = styled.div`
 export const FooterWrapper = styled.div`
   width: 1100px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1130px) {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+  }
 `;

@@ -22,8 +22,6 @@ const Navigation = () => {
           <Outlet />
         </Main>
       </MainWrapper>
-      {/*
-       */}
       <FooterWrapper>
         <Footer />
       </FooterWrapper>

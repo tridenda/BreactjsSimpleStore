@@ -7,8 +7,6 @@ const Home = () => {
   return (
     <Fragment>
       <Cover />
-      {/*
-       */}
       <HotProduct />
       <Directory />
     </Fragment>

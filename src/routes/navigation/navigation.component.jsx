@@ -22,11 +22,9 @@ const Navigation = () => {
           <Outlet />
         </Main>
       </MainWrapper>
-      {/*
       <FooterWrapper>
-      <Footer />
+        <Footer />
       </FooterWrapper>
-    */}
     </Fragment>
   );
 };
